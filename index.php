@@ -109,6 +109,8 @@ input {
             $segundoNome=filter_input(INPUT_POST, "sobrenome", FILTER_SANITIZE_SPECIAL_CHARS),
             $email=$_POST['email'],
             $telefone=filter_input(INPUT_POST, 'telefone', FILTER_SANITIZE_NUMBER_INT),
+            $escolaridade=filter_input(INPUT_POST, "escolaridade", FILTER_SANITIZE_SPECIAL_CHARS),
+            $curso=filter_input(INPUT_POST, "curso", FILTER_SANITIZE_SPECIAL_CHARS),
             $cargo=filter_input(INPUT_POST, "cargo", FILTER_SANITIZE_SPECIAL_CHARS),
             $habilidade=filter_input(INPUT_POST, "descrição", FILTER_SANITIZE_SPECIAL_CHARS),
         );
@@ -121,31 +123,17 @@ input {
         $userNamedb='root';
         $senhadb='';
         $nomedb='formulariodb';
-
-        /*===============conexão com o servidor==============*/
-
-        $conexão=mysqli_connect($nomeServidor, $userNamedb, $senhadb); //estabelece conexão com o servidor
-
-        if (!$conexão) { //chega conexão com o servidor
+        
+        /*=============conexão com o banco de dados============= */
+        $conexão=mysqli_connect($nomeServidor, $userNamedb, $senhadb, "banco_de_dados_1");
+        
+        if (!$conexão) { //checa conexão com o banco de dados
             die("Connection failed: " . mysqli_connect_error());
         }
-
-        /*==============criando bando de dados============= */
-
-        $sql="CREATE DATABASE bando_de_dados_1"; //defino um código de SQL para a variavel que vai ser usado para criar db
-
-        if(mysqli_query($conexão, $sql)){//manda um comando para o sql que nesse caso é para criar o banco de dados
-            $resultado[]="db criado com sucesso";
-        }
         else{
-            echo "Error creating database: " . mysqli_error($conexão);
+            $resultado[]="conexão com o banco de dados estabelecida com sucesso";
         }
-        /*===============manipulando o banco de dados=========*/
-
-
         
-
-
 
         var_dump($preenchimento);
         echo "<br><br>";
