@@ -1,6 +1,7 @@
 <?php session_start(); //garante que os dados dessa pagina sejam acessados pelas outras paginas?>
 
 
+
 <!DOCTYPE html>
 <html lang="pt-br">
     <head>
@@ -98,11 +99,13 @@ input {
 
 
 <?php
+    $erros=array();             //caso haja algum erro nos dados, sera exibido para o usuario
+    $resultado=array();         //parte teste do programa
+
+    require_once("conectdb.php");
     
 
     if(isset($_POST["enviar"])){    //se e somente se o usuario apertar o botão de enviar ele vai executar essa parte do código
-        $erros=array();             //caso haja algum erro nos dados, sera exibido para o usuario
-        $resultado=array();         //parte teste do programa
         
         $preenchimento =array(
             'nome'=>$nome=filter_input(type: INPUT_POST, var_name: "nome", filter: FILTER_SANITIZE_FULL_SPECIAL_CHARS),//recebe o valor do nome inserido pelo usuário
@@ -116,23 +119,6 @@ input {
         );
         $_SESSION['primeiroNome']=$nome;//agora o nome de usuario esta disponivel para os arquivos durante toda a seção
 
-        //antes de criar um db é necessario conectar a base de dados
-
-        /*==============variaveis do servidor================*/
-        $nomeServidor='localHost';
-        $userNamedb='root';
-        $senhadb='';
-        $nomedb='formulariodb';
-        
-        /*=============conexão com o banco de dados============= */
-        $conexão=mysqli_connect($nomeServidor, $userNamedb, $senhadb, "banco_de_dados_1");
-        
-        if (!$conexão) { //checa conexão com o banco de dados
-            die("Connection failed: " . mysqli_connect_error());
-        }
-        else{
-            $resultado[]="conexão com o banco de dados estabelecida com sucesso";
-        }
         
 
         var_dump($preenchimento);
