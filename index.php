@@ -105,7 +105,7 @@
             <!-- Telefone -->
             <div class="form-group">
                 <label for="telefoneID">Telefone:</label>
-                <input type="tel" name="telefone" id="telefoneID" class="form-control" placeholder="(84) 9XXXX-XXXX"  required>
+                <input type="tel" name="telefone" id="telefoneID" class="form-control" placeholder="(84)9XXXX-XXXX"  required>
             </div>
             
             <!-- Cargo -->

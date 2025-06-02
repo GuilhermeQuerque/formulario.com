@@ -65,10 +65,11 @@
         else{
             $erros[]="formato de arquivo ".$extensao." não permitido por favor insira um arquivo válido";
         }
-        require_once("enviar_email.php");
+        require_once("enviar_email.php"); 
 
     }
 
+    //exibe resultados possitivos ou negativos caso haja algum
     if(!empty($erros)){
         foreach($erros as $i1){
             echo "<li style='color:red;'>$i1</li>";

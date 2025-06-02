@@ -1,5 +1,5 @@
 <?php
-//requisitando diretorios para enviar 
+//requisitando diretorios 
 use PHPMailer\PHPMailer\PHPMailer;
 
 use PHPMailer\PHPMailer\OAuth;
