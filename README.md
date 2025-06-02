@@ -9,7 +9,7 @@ Esse programa leva em consideração que já existe um banco de dados instalado.
 ## Instalação/uso do formulario.php
 1. Clone o repositório:
 ```bash
-git clone https://github.com/GuilhermeQuerque/formulario.com/tree/main
+git clone https://github.com/GuilhermeQuerque/formulario.com.git
 ```
 2. Instale as dependencias
 ```bash
