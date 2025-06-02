@@ -7,7 +7,6 @@ $nomedb='FORMULARIO';
 $senhadb='';
 $tabeladb='INSCRICAO_USUARIO';
 
-
 //conexão sem especificar o banco
 $conexao = new PDO("mysql:host=$host", $user, $password);
 

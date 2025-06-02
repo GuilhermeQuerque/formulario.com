@@ -67,7 +67,6 @@
             background-color: #45a049;
         }
         
-        /* Responsividade */
         @media (max-width: 600px) {
             .form-group label {
                 width: 100%;

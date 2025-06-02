@@ -35,7 +35,6 @@
                 $conteudoCurriculo = file_get_contents($arquivoTemp); //variavel que armazena o arquivo
                 $horaInscricao = date('Y-m-d H:i:s');   //horario de inscrição
 
-
                 //enviado todos os arquivos para o banco de dados
                 $sql->bindParam(':nome', $nome);
                 $sql->bindParam(':segundoNome', $segundoNome);

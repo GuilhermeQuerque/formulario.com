@@ -2,6 +2,7 @@
     "name": "meu-projeto/formulario-curriculo",
     "description": "Sistema de envio de currículos para UGTSIC/SESAP-RN",
     "type": "project",
+    
     "require": {
         "phpmailer/phpmailer": "^6.6",
         "league/oauth2-google": "^4.0",
