@@ -16,7 +16,7 @@
         $ipUsuario = $_SERVER['REMOTE_ADDR'];
         
         //conectando ao banco de dados e preparando o comando de armazenamento para o sql
-        require_once("connect_db.php");
+        require_once("/conf/connect_db.php");
         $sql = $conexao->prepare("INSERT INTO guilhermedb(PRIMEIRO_NOME, SEGUNDO_NOME, EMAIL, TELEFONE, ESCOLARIDADE, CURSO, CARGO, HABILIDADES, HORA_INSCRICAO, DOCUMENTO, IP)
                                 VALUES (:nome, :segundoNome, :email, :telefone, :escolaridade, :curso, :cargo, :habilidade, :hora, :conteudo, :ip)");
                 
